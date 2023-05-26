@@ -1,0 +1,18 @@
+<h5><%= "Dirección: #{documentals_index_path}" %></h5>
+
+
+<h2>Listado de Documentales</h2>
+<button type="button" class="btn btn-secondary"><%= link_to "Crear Documental", "/documentals/new", class: "nav-link" %></button>
+
+<% @documentals.each do |documental| %>
+  <div class="bg-body-secondary m-3 ">
+    <h4><%= documental.name %></h4>
+    <p><strong>Director:</strong> <%= documental.director %></p>
+    <p><%= documental.synopsis %></p>
+  </div>
+  <hr>
+<% end %>
+
+
+
+<p>Find me in app/views/documentals/index.html.erb</p>

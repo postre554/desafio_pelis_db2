@@ -1,0 +1,18 @@
+<h5><%= "Dirección: #{series_index_path}" %></h5>
+
+
+<h2>Listado de Series</h2>
+<button type="button" class="btn btn-secondary"><%= link_to "Crear Serie", "/series/new", class: "nav-link" %></button>
+
+<% @series.each do |serie| %>
+  <div class="bg-body-secondary m-3 ">
+    <h4><%= serie.name %></h4>
+    <p><strong>Director:</strong> <%= serie.director %></p>
+    <p><%= serie.synopsis %></p>
+  </div>
+  <hr>
+<% end %>
+
+
+
+<p>Find me in app/views/series/index.html.erb</p>

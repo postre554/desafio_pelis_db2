@@ -1,0 +1,2 @@
+module DocumentalsHelper
+end

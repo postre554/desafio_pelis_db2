@@ -1,0 +1,20 @@
+<h5><%= "Dirección: #{root_path}" %></h5>
+
+
+<h2>Listado de Pelis</h2>
+<button type="button" class="btn btn-secondary"><%= link_to "Crear Movie", "/movies/new", class: "nav-link" %></button>
+
+<% @movies.each do |movie| %>
+  <div class="bg-body-secondary m-3 ">
+    <h4>Nombre:<%= movie.name %></h4>
+    <p><strong>Director:</strong> <%= movie.director %></p>
+    <p>sinopsis: <%= movie.synopsis %></p>
+  </div>
+  <hr>
+<% end %>
+
+
+
+<p>Find me in app/views/movies/index.html.erb</p>
+
+
